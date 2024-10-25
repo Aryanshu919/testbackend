@@ -19,6 +19,10 @@ app.use(
 app.use(express.json());
 
 app.get("/", async (req, res) => {
+  res.json({ message: "hello" });
+});
+
+app.get("/lol", async (req, res) => {
   console.log("hurray");
   const users = await User.find({});
 
