@@ -22,6 +22,10 @@ app.get("/", async (req, res) => {
   res.json({ message: "hello" });
 });
 
+app.get("/test",(req,res) =>{
+  res.json({msg: "test is working fine"});
+});
+
 app.get("/lol", async (req, res) => {
   console.log("hurray");
   const users = await User.find({});
